@@ -1,0 +1,264 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Open Sans", "Arial", sans-serif;
+  background: linear-gradient(203.72deg, rgba(173, 228, 245, 0.7) 17.72%, rgba(122, 115, 255, 0.7) 93.98%), #FFFFFF;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  max-width: 450px;
+  max-height: 518px;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+.signin,
+.success {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.signin {
+  padding: 30px;
+  box-sizing: border-box;
+  background: linear-gradient(173.98deg, #FFFFFF 0.33%, #FFFFFF 23.37%, #664DE5 23.53%, #664DE5 94.6%), #FFFFFF;
+}
+
+h1 {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 4.0rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #664DE5;
+}
+
+.signinForm {
+  padding-top: 70px;
+}
+
+.signinForm a {
+  text-decoration: none;
+}
+
+.signinForm a:hover {
+  text-decoration: underline;
+}
+
+.signinForm .field {
+  position: relative;
+  margin: 0 0 24px;
+  padding: 0;
+  border: 0 none;
+  z-index: 1;
+}
+
+.signinForm label {
+  margin: 0 0 4px;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #fff
+}
+
+.signinForm label a {
+  float: right;
+  line-height: 1.8;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #fff;
+  text-decoration: none;
+}
+
+.signinForm input:not([type=checkbox]) {
+  width: 100%;
+  margin: 0;
+  padding: 14px;
+  box-sizing: border-box;
+  border: solid 1px #fff;
+  border-radius: 5px;
+}
+
+.signinForm .checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.signinForm .checkbox > input {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  margin-right: 10px;
+  box-sizing: border-box;
+  background-color: #FFF;
+  border: solid 1px #fff;
+  border-radius: 5px;
+  appearance: none;
+  cursor: pointer;
+}
+
+.signinForm .checkbox > input:checked + span::before {
+  content: '\2713';
+  display: block;
+  text-align: center;
+  color: #664DE5;
+  position: absolute;
+  left: 0.45rem;
+  top: 0rem;
+  font-size: 1.6rem;
+}
+
+.signinForm .field.error input {
+  outline: none;
+  background: linear-gradient(0deg, rgba(255, 0, 0, 0.1), rgba(255, 0, 0, 0.1)), #FFFFFF;
+  border: 1px solid #FF0000;
+  box-shadow: inset 0px 0px 10px rgba(255, 0, 0, 0.5);
+}
+
+.signinForm .field i {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  z-index: 10;
+}
+
+.signinForm .field i {
+  position: absolute;
+  top: 34px;
+  right: 0;
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  background: transparent no-repeat center center;
+}
+
+.signinForm .field i.eye {
+  background-image: url("../assets/eye-hide-icon.svg");
+  cursor: pointer;
+}
+
+.signinForm .field i.toggled.eye {
+  top: 34.5px;
+  background-image: url("../assets/eye-show-icon.svg");
+}
+
+.signinForm .field i.errorIcon {
+  display: none;
+}
+
+.signinForm .field.error i.password-icon {
+  display: none;
+}
+
+.signinForm .field.error i.errorIcon {
+  display: block;
+  background-image: url("../assets/danger-circle-icon.svg");
+}
+
+.signinForm .submitBttn {
+  display: block;
+  margin: 30px auto;
+  width: 100%;
+  max-width: 250px;
+  height: 50px;
+  background: #fff;
+  border: 0 none;
+  border-radius: 25px;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: #664DE5;
+  cursor: pointer;
+}
+
+.signinForm .submitBttn[disabled] {
+  cursor: not-allowed;
+}
+
+.signinForm p,
+.signinForm a {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: white;
+}
+
+.success {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #664DE5;
+}
+
+.success .closeBttn {
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.success .chat-icon {
+  display: block;
+  width: 202px;
+  height: 202px;
+  margin: 0 auto;
+  background: transparent url("../assets/chat-icon.svg") no-repeat -5px -5px;
+}
+
+.success span {
+  display: inline-block;
+  padding-top: 82px;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+/*******************************************
+Not supporting any screen < 300px wide
+*******************************************/
+@media only screen and (max-width: 500px) {
+  .success .closeBttn {
+    top: -25px;
+    left: 50%;
+    margin-left: -25px;
+  }
+
+  .success span {
+    display: inline-block;
+    padding-top: 82px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.block {
+  display: block;
+}

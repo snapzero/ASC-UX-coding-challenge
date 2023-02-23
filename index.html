@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UX/UI Developer Take-Home Coding Challenge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" />
+
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <!-- Start delete the lines between this -->
+    <main>
+      <div class="signin" id="signin">
+        <h1>Sign In</h1>
+        <form class="signinForm">
+          <div class="field">
+            <label class="block">Email Address</label>
+            <!-- This uses basic HTML5 validation, would use a pattern if it needed further formatting -->
+            <input class="block" type="email" id="email" required />
+            <i class="errorIcon"></i>
+          </div>
+
+          <div class="field">
+            <label class="block">
+              Password
+              <!-- Would never use a dummy link like this in a real world situation  -->
+              <a href="#">Forgot your password?</a>
+            </label>
+            <!-- This uses basic HTML5 validation, would use a pattern or check the value
+              before submit to be sure the password contained the correct characters -->
+            <input class="block" type="password" id="password" required />
+            <i class="password-icon eye" id="togglePassword" role="checkbox" aria-checked="false" tabindex="0"></i>
+            <i class="errorIcon"></i>
+          </div>
+
+          <div class="field">
+            <label class="checkbox">
+              <input type="checkbox" id="remember" name="remember" />
+              <span>Remember me</span>
+            </label>
+          </div>
+
+          <button class="submitBttn" id="submitBttn" type="submit">Continue</button>
+
+          <p class="text-center">
+            Don't have an account?
+            <!-- Again, would never use a dummy link like this in a real world situation  -->
+            <a href="#">Sign up</a>
+          </p>
+        </form>
+      </div>
+    </main>
+    <!-- End delete the lines between this -->
+    <script src="js/validator.js"></script>
+  </body>
+</html>
